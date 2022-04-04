@@ -1,0 +1,22 @@
+<pre>
+  UIP: 001
+  Title: Drop Outdatet Transactions from MemPool
+  Author: Alexander Andreev
+</pre>
+
+
+== Abstract ==
+
+Outdated Transaction should get removed from the MemPool
+
+== Motivation ==
+
+Unsend transaction might fill the MemPool to a level where the MemPool might allocate a large amount of storage. 
+To avoid this situation the MemPool should get checked for unsend transactions.
+
+== Task ==
+
+All transactions are placed in mempool.
+If a transaction is local (originated from current node, but not received from other) it should be kept and periodically tried to resend(1h). 
+If transaction is to be received from other, a timestamp should be added and removed  after some time. (24h)
+
