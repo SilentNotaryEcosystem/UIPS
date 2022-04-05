@@ -20,3 +20,6 @@ All transactions are placed in mempool.
 If a transaction is local (originated from current node, but not received from other) it should be kept and periodically tried to resend(1h). 
 If transaction is to be received from other, a timestamp should be added and removed  after some time. (24h)
 
+== References ==
+MemPool: https://github.com/SilentNotaryEcosystem/Cil-core/blob/master/node/mempool.js
+
