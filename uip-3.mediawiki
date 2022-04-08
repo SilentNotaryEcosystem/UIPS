@@ -1,0 +1,34 @@
+<pre>
+  UIP: 003
+  Title: Cleanup MemPool from transactions that are already added to blocks
+  Author: Alexander Andreev
+</pre>
+
+
+== Abstract ==
+
+Cleanup MemPool from transactions that are already added to blocks
+
+== Motivation ==
+
+The MemPool is the tempopary storage for the transactions that are going to get processed.
+After processing the MemPool transactions and adding them to blocks the MemPool should get checked for possible transactions to get removed.
+
+== Task ==
+
+This is a follow up on UIP1. 
+
+It happens because every new transaction checks for conflicts with other transactions in MemPool. But it should be checked against patch that is a result of all mempools transaction execution.
+
+== Type ==
+
+BugFix
+
+== Status == 
+
+Open
+
+== References ==
+MemPool: https://github.com/SilentNotaryEcosystem/Cil-core/blob/master/node/mempool.js
+UIP1: https://github.com/SilentNotaryEcosystem/UIPS/blob/main/uip-1.mediawiki
+
