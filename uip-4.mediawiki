@@ -1,0 +1,35 @@
+<pre>
+  UIP: 004
+  Title: Check whether RPC transaction execution can interfere with block execution
+  Author: Alexander Andreev
+</pre>
+
+
+== Abstract ==
+
+Check whether RPC transaction execution can interfere with block execution
+
+== Motivation ==
+
+An incoming transaction might have sideeffects with the VM environment. This needs to be analyze and potentially fixed to increase node stability
+
+== Task ==
+
+The VM environment is carefully set up for every transaction execution, but there is the  possibility that it could be interrupted by incoming RPC transaction with another contract call. 
+
+In this case execution results are unpredictable and will lead to node failure.
+
+We should check (write inegrational test?) whether it possible? if yes - fix it using mutex (see code for mutex usage)
+
+== Type ==
+
+BugFix
+
+== Status == 
+
+Open
+
+== References ==
+MemPool: https://github.com/SilentNotaryEcosystem/Cil-core/blob/master/node/mempool.js
+
+

@@ -1,0 +1,33 @@
+<pre>
+  UIP: 002
+  Title: Node or running RPC reduces performance upon receiving transactions
+  Author: Alexander Andreev
+</pre>
+
+
+== Abstract ==
+
+Node or running RPC reduces performance upon receiving transactions
+
+== Motivation ==
+
+A node or a running RPC looses performance during uptime when it receives transactions.
+This affect reduces the performance of the overall network.
+
+== Task ==
+
+Steps to reproduce: send 10-15 transactions one by one to RPC and the processing time for each transaction will go up. This behaviour needs to get fixed.
+
+It happens because every new transaction checks for conflicts with other transactions in MemPool. But it should be checked against patch that is a result of all mempools transaction execution.
+
+== Type ==
+
+BugFix
+
+== Status == 
+
+Implemented
+
+== References ==
+MemPool: https://github.com/SilentNotaryEcosystem/Cil-core/blob/master/node/mempool.js
+
