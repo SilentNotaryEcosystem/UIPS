@@ -1,0 +1,29 @@
+<pre>
+  UIP: 005
+  Title: Fix protobuf exception in dev branch
+  Author: Maxim Sklyarov
+</pre>
+
+
+== Abstract ==
+
+The reason of protobuf exception must be located and fixed
+
+
+== Motivation ==
+
+After moving to Node.js v. 16.17.0 we could meet this exception in the log:
+
+msgassembler:serializer:error [ 165 ] RangeError: index out of range: 1 + 10 > 1
+    at indexOutOfRange (/home/maxim/_projects/Ubikiri/Cil-core/node_modules/protobufjs/src/reader.js:13:12)
+    at BufferReader.read_uint32 [as uint32] (/home/maxim/_projects/Ubikiri/Cil-core/node_modules/protobufjs/src/reader.js:98:19)
+    at BufferReader.read_int32 [as int32] (/home/maxim/_projects/Ubikiri/Cil-core/node_modules/protobufjs/src/reader.js:109:17)
+    at Function.readMsgLength (/home/maxim/_projects/Ubikiri/Cil-core/network/serializer.js:37:40)
+
+== Task ==
+
+We need to investigate the reason, why we have the exception described above and fix it.
+
+== Status == 
+
+Open
