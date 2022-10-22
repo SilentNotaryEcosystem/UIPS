@@ -31,4 +31,3 @@ Open
 == References ==
 MemPool: https://github.com/SilentNotaryEcosystem/Cil-core/blob/master/node/mempool.js
 UIP1: https://github.com/SilentNotaryEcosystem/UIPS/blob/main/uip-1.mediawiki
-

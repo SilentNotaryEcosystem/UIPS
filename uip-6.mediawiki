@@ -1,6 +1,6 @@
 <pre>
   UIP: 006
-  Title: To find a workaraund for LevelDB size growing
+  Title: Find a workaround for LevelDB size growing too big
   Author: Maxim Sklyarov
 </pre>
 
