@@ -1,6 +1,6 @@
 <pre>
   UIP: 005
-  Title: Fix protobuf exception in dev branch
+  Title: Fix protobuf exception in the dev branch
   Author: Maxim Sklyarov
 </pre>
 
