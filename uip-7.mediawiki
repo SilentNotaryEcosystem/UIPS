@@ -13,15 +13,12 @@ Must work at least not worse than now
 
 To increase performance if possible
 
-
 == Task ==
 
-
-- Should be able to use nodes behind NAT/Docker (support TRUST_ANNOUNCE option)
-- Should be able to "forget" old nodes (We can't connect these nodes) like here:
-https://en.bitcoin.it/wiki/Protocol_documentation#addr
-- Shold NOT forget all the nodes and break the network
-- Peers should send each other only address and capabilities (no counters or local data)
+ - Should be able to use nodes behind NAT/Docker (support TRUST_ANNOUNCE option)
+ - Should be able to "forget" old nodes (We can't connect these nodes) like here: https://en.bitcoin.it/wiki/Protocol_documentation#addr
+ - Shold NOT forget all the nodes and break the network
+ - Peers should send each other only address and capabilities (no counters or local data)
 
 == Status == 
 
