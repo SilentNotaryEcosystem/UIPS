@@ -1,0 +1,28 @@
+<pre>
+  UIP: 007
+  Title: Refactor / rewrite https://github.com/SilentNotaryEcosystem/Cil-core/tree/peer_reinvent branch, fix peers
+  Author: Maxim Sklyarov
+</pre>
+
+
+== Abstract ==
+
+Must work at least not worse than now
+
+== Motivation ==
+
+To increase performance if possible
+
+
+== Task ==
+
+
+1. Should be able to use nodes behind NAT/Docker (support TRUST_ANNOUNCE option)
+2. Should be able to "forget" old nodes (We can't connect these nodes) like here:
+https://en.bitcoin.it/wiki/Protocol_documentation#addr
+3. Shold NOT forget all the nodes and break the network
+4. Peers should send each other only address and capabilities (no counters or local data)
+
+== Status == 
+
+Open
