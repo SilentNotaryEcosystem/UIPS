@@ -26,7 +26,7 @@ BugFix
 
 == Status == 
 
-Open
+Implemented
 
 == References ==
 MemPool: https://github.com/SilentNotaryEcosystem/Cil-core/blob/master/node/mempool.js
